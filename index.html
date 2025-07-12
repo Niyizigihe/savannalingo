@@ -324,16 +324,7 @@
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
         }
-        
-        /* .service-icon {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        } */
-
         .service-icon {
-            /* height: 80px;
-            width: 80px; */
             margin: 0 auto 1rem auto;
             display: flex;
             align-items: center;
@@ -718,6 +709,71 @@
                 font-size: 2.5rem;
             }
         }
+
+
+        @media (max-width: 768px) {
+  .hero-slider {
+    width: 100%;
+    position: relative;
+  }
+
+  .hero-slide {
+    display: none;
+    position: relative;
+    height: 450px;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .hero-slide.active {
+    display: flex;
+  }
+
+  .hero-slide .hero-img-container {
+    display: none; /* Hide the separate image */
+  }
+
+  .hero-slide .hero-text-container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 100%;
+  }
+
+  .hero-slide .hero-text-container h1 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-slide .hero-text-container p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .cta-btn {
+    background-color: var(--secondary);
+    color: white;
+  }
+
+  /* Backgrounds for each slide */
+  .hero-slide:nth-child(1) {
+    background-image: url('assets/images/translate.png');
+  }
+
+  .hero-slide:nth-child(2) {
+    background-image: url('assets/images/marketing.png');
+  }
+
+  .hero-slide:nth-child(3) {
+    background-image: url('assets/images/content-creation.jpeg');
+  }
+}
+
     </style>
 </head>
 <body>
@@ -743,9 +799,6 @@
 
     <!-- Page Content - Changes based on which page is active -->
     <div id="pageContent">
-        <!-- HOME PAGE CONTENT -->
-        <!-- Hero Section with Slider -->
-        <!-- Hero Section with Slider -->
         <section class="hero">
             <div class="container">
                 <div class="hero-slider">
